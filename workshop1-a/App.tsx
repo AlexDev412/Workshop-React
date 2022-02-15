@@ -7,6 +7,7 @@ import woman from './assets/woman.png'
 export default function App() {
   return (
     <View style={styles.container}>
+      <StatusBar style="auto" />
       <Image source={woman}/>
       <View style={styles.title}>
           <Text style={styles.textTitle}>Never more in rush</Text>
@@ -19,7 +20,6 @@ export default function App() {
           color='#517fa4'
         />
   </TouchableOpacity>
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -32,8 +32,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    alignItems: 'center',
-  },
+    // alignItems: 'center',
+      display: 'flex',
+      width: '80%', 
+      alignItems: 'center', 
+      flexDirection: 'column', 
+      justifyContent: 'space-between' 
+    },
   textTitle : {
     fontSize: 30,
     color: 'grey'
